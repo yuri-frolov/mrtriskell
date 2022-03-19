@@ -1,0 +1,78 @@
+{% import "../blocks/_call-link.njk" as callLink %}
+{% import "../blocks/_mail-link.njk" as mailLink %}
+{% import "../blocks/_user-nav.njk" as userNav %}
+{% import "../blocks/_logo.njk" as logo %}
+{% import "../blocks/_hamburger.njk" as hamburgerBtn %}
+{% import "../blocks/_search.njk" as searchInput %}
+{% import "../blocks/_user-nav.njk" as userNavigation %}
+
+{% block header %}
+<header class="header-desktop header">
+  <div class="container">
+    <div class="header__top-wrapper">
+      <div class="header__contacts">
+        <div class="header__contact">
+          {{callLink.callLink(
+          'header__contact-call',
+          '+7 800 600-61-91'
+          )
+          }}
+          <ul class="header__contact-small-links">
+            <li class="header__contact-small-link">
+              <a class="link-hover" href="#">Viber</a>
+            </li>
+            <li class="header__contact-small-link">
+              <a class="link-hover" href="#">Whats App</a>
+            </li>
+            <li class="header__contact-small-link">
+              <a class="link-hover" href="#">Telegram</a>
+            </li>
+          </ul>
+        </div>
+        <div class="header__contact">
+          {{mailLink.mailLink(
+          'header__contact-mail',
+          '+7 800 600-61-91'
+          )
+          }}
+        </div>
+      </div>
+      {{logo.logo('header__logo')}}
+      {{userNav.userNav('header__user-nav')}}
+    </div>
+    <div class="header__bottom-wrapper">
+    {{hamburgerBtn.hamburger(
+    'header__desktop-menu-btn',
+    'Каталог'
+    )
+    }}
+
+    {{searchInput.search(
+    'header__desktop-search',
+    'Поиск'
+    )
+    }}
+
+    <ul class="header__links">
+      <li class="header__link">
+        <a href="#" class="link-hover link-hover--torch">Промокоды<span></span>
+        </a>
+        </li>
+      <li class="header__link">
+        <a href="#" class="link-hover link-hover--torch">Скидки<span></span></a>
+        </li>
+      <li class="header__link">
+        <a href="#" class="link-hover link-hover--torch">Помощь<span></span></a>
+        </li>
+      <li class="header__link">
+        <a href="#" class="link-hover link-hover--torch">О нас<span></span></a>
+        </li>
+      <li class="header__link">
+        <a href="#" class="link-hover link-hover--torch">Контакты<span></span></a>
+        </li>
+    </ul>
+    </div>
+  {% include '../parts/_desktopmenu.njk' %}
+  </div>
+</header>
+{% endblock %}

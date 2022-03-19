@@ -10,6 +10,23 @@
 	}
 }
 
+@mixin text($font-family, $font-size, $font-weight) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  letter-spacing: $normal-letter-spacing;
+
+  @if $font-size == $font-size--large {
+    line-height: $line-height--large;
+  } @else if $font-size == $font-size--normal {
+    line-height: $line-height--normal;
+  } @else if $font-size == $font-size--small {
+    line-height: $line-height--small;
+  } @else {
+    line-height: floor($font-size * $line-height--base);
+  }
+}
+
 @mixin bg ($size:"contain", $position: "center") {
 	background-size: #{$size};
 	background-position: #{$position};
@@ -57,4 +74,21 @@
 	max-width: #{$max-width};
 	padding: 0 #{$padding};
 	margin: 0 auto;
+}
+
+
+@mixin visually-hidden() {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  opacity: 0;
+  visibility: hidden;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

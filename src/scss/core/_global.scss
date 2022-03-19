@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   font-size: 100%;
+  font-family: 'Jost', sans-serif;
 }
 
 *,
@@ -14,11 +15,6 @@ body {
   height: 100%;
   position: relative;
 }
-
-/* main {
-  flex: 1 0 auto;
-  overflow: hidden;
-} */
 
 ul,
 ol,
@@ -67,6 +63,10 @@ dd {
 fieldset {
   border: none;
   padding-left: 0;
+}
+
+button {
+  @include no-btn;
 }
 
 ///DEBUG

@@ -1,0 +1,16 @@
+@use 'sass:map';
+
+body .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main {
+  background-color: map.get($color, background, base);
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}

@@ -1,0 +1,62 @@
+{% import "../blocks/_search.njk" as searchInput %}
+{% import "../blocks/_contacts.njk" as contacts %}
+
+<nav class="mobmenu">
+  <div class="container">
+    <ul class="mobmenu__list">
+
+      <li class="mobmenu__link submenu">
+        <a class="submenu__link-text" href="#">Каталог</a>
+        <ul class="submenu__list submenu__list--hidden">
+          <li class="submenu__link"><a href="">Новинки</a></li>
+          <li class="submenu__link"><a href="">Наборы для татуировок</a></li>
+          <li class="submenu__link"><a href="">Тату машинки</a></li>
+          <li class="submenu__link"><a href="">Тату краски</a></li>
+          <li class="submenu__link"><a href="">Тату иглы</a></li>
+          <li class="submenu__link"><a href="">Тату держатели</a></li>
+          <li class="submenu__link"><a href="">Тату наконечники</a></li>
+          <li class="submenu__link"><a href="">Блоки питания</a></li>
+          <li class="submenu__link"><a href="">Педали и провода</a></li>
+          <li class="submenu__link"><a href="">Аксессуары</a></li>
+          <li class="submenu__link"><a href="">Принтеры и планшеты</a></li>
+          <li class="submenu__link"><a href="">Защита, ёмкости, расходники</a></li>
+        </ul>
+      </li>
+
+      <li class="mobmenu__link">
+        <a href="">Контакты</a>
+      </li>
+      <li class="mobmenu__link">
+        <a href="">Промокоды</a>
+      </li>
+      <li class="mobmenu__link">
+        <a href="">Скидки</a>
+      </li>
+      <li class="mobmenu__link">
+        <a href="">Помощь</a>
+      </li>
+      <li class="mobmenu__link">
+        <a href="">О нас</a>
+      </li>
+      <li class="mobmenu__link">
+        <a href="">Избранное</a>
+      </li>
+      <li class="mobmenu__link">
+        <a href="">Личный кабинет</a>
+      </li>
+
+    </ul>
+
+    {{searchInput.search(
+    'mobmenu__search',
+    'Поиск'
+    )
+    }}
+
+    {{contacts.contacts(
+    'mobmenu__contacts'
+    )
+    }}
+
+  </div>
+</nav>

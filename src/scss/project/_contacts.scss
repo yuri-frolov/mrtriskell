@@ -1,0 +1,28 @@
+@use 'sass:map';
+
+.contacts {
+
+  &__links {
+    display: flex;
+    gap: 12px;
+    & .contacts__link {
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-repeat: no-repeat;
+      background-position: center;
+      border: 1.5px solid map.get($color, primary, base);
+    }
+  }
+
+  &__working-hours {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: map.get($color, text, gray);
+  }
+
+  &__call {
+    margin-bottom: 20px;
+  }
+
+}

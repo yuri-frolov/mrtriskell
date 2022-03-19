@@ -1,5 +1,41 @@
+{% import "../blocks/_contacts.njk" as contacts %}
+{% import "../blocks/_logo.njk" as logo %}
+
 {% block footer %}
-<footer>
-    Подвал
+<footer class="footer">
+  <div class="container">
+    <div class="footer__wrapper-left">
+      <div class="footer__logo-wrapper">
+      {{logo.logo('footer__logo')}}
+      <a href="#" class="footer__privacy-policy">Политика конфиденциальности</a>
+      </div>
+      <ul class="footer__list">
+        <li class="footer__list-item">
+          <a href="" class="footer__list-item-link">Промокоды</a>
+        </li>
+        <li class="footer__list-item">
+          <a href="" class="footer__list-item-link">Скидки</a>
+        </li>
+        <li class="footer__list-item">
+          <a href="" class="footer__list-item-link">Помощь</a>
+        </li>
+        <li class="footer__list-item">
+          <a href="" class="footer__list-item-link">О нас</a>
+        </li>
+        <li class="footer__list-item">
+          <a href="" class="footer__list-item-link">Контакты</a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="footer__wrapper-right">
+      {{contacts.contacts(
+      'footer__contacts'
+      )
+      }}
+    </div>
+
+  </div>
 </footer>
 {% endblock %}

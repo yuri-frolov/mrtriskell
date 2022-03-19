@@ -1,0 +1,15 @@
+@use 'sass:map';
+
+.mail-link {
+  color: map.get($color, text, white);
+  margin-bottom: 20px;
+  display: inline-flex;
+
+  &__img {
+    margin-right: 10px;
+  }
+
+  &__address {
+    color: map.get($color, text, white);
+  }
+}

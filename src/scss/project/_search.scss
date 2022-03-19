@@ -1,0 +1,29 @@
+@use 'sass:map';
+@use '../utils/variables';
+
+.search {
+  position: relative;
+  &:before {
+    display: block;
+    content: url('../img/search.svg');
+    width: 16.42px;
+    height: 16.82px;
+    position: absolute;
+    top: 10px;
+    left: 22px;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 10px 55px 10px 55px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: map.get($color, primary, dark);
+    background: transparent;
+    color: map.get($color, text, white);
+  }
+
+  &__submit {
+    @include visually-hidden;
+  }
+}

@@ -1,0 +1,10 @@
+@use 'sass:map';
+
+.call-link {
+  color: map.get($color, text, white);
+  display: inline-flex;
+
+  &__img {
+    margin-right: 10px;
+  }
+}

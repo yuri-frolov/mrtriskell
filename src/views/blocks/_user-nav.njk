@@ -1,0 +1,14 @@
+{% macro userNav(classAsElement) %}
+    <div class="{{ classAsElement }} user-nav">
+      <a class="user-nav__cart" href="#">
+        <span class="user-nav__cart-label">
+          <span class="user-nav__price">38 750</span>
+          <span class="user-nav__currency">₽</span>
+        </span>
+        <div class="user-nav__cart-img --svg__cart"></div>
+        <span class="user-nav__cart-badge">17</span>
+      </a>
+      <a class="user-nav__wishlist --svg__wishlist" href="#"></a>
+      <a class="user-nav__login --svg__login" href="#"></a>
+    </div>
+{% endmacro %}

@@ -1,0 +1,21 @@
+$color: (
+  primary: (
+    base: #BB8C5F,
+    dark: #524336,
+  ),
+  text: (
+    dark: #3E424B,
+    gray: #636B78,
+    white: #FAF6F2,
+  ),
+  background: (
+    base: #EEEEEE,
+    light: #F5F5F5,
+    dark: #050402,
+  )
+);
+
+$gutter: 20px;
+
+$min-content-width: 320px;
+$max-content-width: 1256px;

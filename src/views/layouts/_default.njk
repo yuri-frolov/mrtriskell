@@ -9,11 +9,15 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    {% include '../parts/_header.njk' %}
+  <div class="wrapper">
+    {% include '../parts/_header-mobile.njk' %}
+    {% include '../parts/_header-desktop.njk' %}
+
     {% block main %}
     {% endblock %}
-    {% include '../parts/_footer.njk' %}
 
+    {% include '../parts/_footer.njk' %}
+</div>
     <script src="js/libs.min.js"></script>
     <script src="js/webpack.bundle.js"></script>
 </body>

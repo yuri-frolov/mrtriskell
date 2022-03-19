@@ -1,0 +1,6 @@
+{% macro callLink(classAsElement, number) %}
+<a class="{{ classAsElement }} call-link" href="tel:{{number}}">
+  <img src="img/call.svg" alt="" class="call-link__img">
+  <p class="call-link__number">{{number}}</p>
+</a>
+{% endmacro %}

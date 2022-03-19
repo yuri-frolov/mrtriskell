@@ -1,0 +1,6 @@
+{% macro search(classAsElement, placeholder) %}
+<form class="{{ classAsElement }} search">
+  <input class="search__input" type="text" placeholder="{{ placeholder }}">
+  <button class="search__submit" type="submit"></button>
+</form>
+{% endmacro %}

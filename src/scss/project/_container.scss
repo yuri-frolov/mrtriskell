@@ -1,0 +1,7 @@
+.container {
+  min-width: $min-content-width;
+  max-width: $max-content-width;
+  margin: 0 auto;
+  padding-left: $gutter;
+  padding-right: $gutter;
+}

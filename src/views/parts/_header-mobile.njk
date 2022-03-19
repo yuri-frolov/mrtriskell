@@ -1,0 +1,25 @@
+{% import "../blocks/_hamburger.njk" as hamburgerBtn %}
+{% import "../blocks/_search.njk" as searchInput %}
+{% import "../blocks/_user-nav.njk" as userNav %}
+
+{% block header %}
+<header class="header-mobile header">
+  <div class="container">
+    {{hamburgerBtn.hamburger(
+    'header__mobile-menu-btn',
+    'Меню')}}
+
+    {{searchInput.search(
+    'header__search',
+    'Поиск'
+    )
+    }}
+
+    {{userNav.userNav(
+    'header__user-nav'
+    )
+    }}
+  </div>
+      {% include '../parts/_mobmenu.njk' %}
+</header>
+{% endblock %}

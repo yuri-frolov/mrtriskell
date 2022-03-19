@@ -20,7 +20,7 @@ module.exports = function browsersync() {
     logFileChanges: true,
     notify: false, // всплывающая уведа при открытии страницы
     //open: external, // Что открывать при запуске. local | external | ui | tunnel
-    online: true, // true, если нужен tunnel или external
+    online: false, // true, если нужен tunnel или external
     tunnel: "froltend"
   })
   watch('./src/views/**/*.njk', parallel('html'));

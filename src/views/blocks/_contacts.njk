@@ -1,0 +1,23 @@
+{% import "../blocks/_call-link.njk" as callLink %}
+{% import "../blocks/_mail-link.njk" as mailLink %}
+
+{% macro contacts(classAsElement) %}
+<div class="{{ classAsElement }} contacts">
+      {{callLink.callLink(
+    'contacts__call',
+    '+7 800 600-61-91'
+    )
+    }}
+  <div class="contacts__links">
+    <a href="" class="contacts__link --svg__telegram"></a>
+    <a href="" class="contacts__link --svg__viber"></a>
+    <a href="" class="contacts__link --svg__whatsapp"></a>
+  </div>
+  <p class="contacts__working-hours">Время работы: с 9:00 до 20:00 по мск</p>
+      {{mailLink.mailLink(
+    'contacts__mail',
+    'Mr.Triskell@mail.ru'
+    )
+    }}
+</div>
+{% endmacro %}

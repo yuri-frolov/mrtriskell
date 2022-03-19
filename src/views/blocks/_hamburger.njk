@@ -1,0 +1,10 @@
+{% macro hamburger(classAsElement, text) %}
+    <button class="{{ classAsElement }} hamburger">
+      <span class="hamburger__text">{{ text }}</span>
+      <div class="hamburger__button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+{% endmacro %}

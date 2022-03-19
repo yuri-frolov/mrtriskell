@@ -1,0 +1,6 @@
+{% macro mailLink(classAsElement, mail) %}
+<a class="{{ classAsElement }} mail-link" href="mailto:{{ mail }}">
+  <img src="img/mail.svg" alt="" class="mail-link__img">
+  <p class="mail-link__address">{{mail}}</p>
+</a>
+{% endmacro %}
