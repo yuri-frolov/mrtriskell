@@ -111,7 +111,15 @@
   padding: 40px 50px;
   row-gap: 20px;
   column-gap: 35px;
-  max-height: 310px;
+
+  &[id=categories] {////костыль
+    max-height: 311px;
+  }
+
+  &[id=brands] {////костыль
+    max-height: 505px;
+    min-width: 1090px;
+  }
 
   &-item {
     max-width: 250px;
