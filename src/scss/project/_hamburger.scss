@@ -5,6 +5,10 @@
   align-items: center;
   font-size: 25px;
 
+  & > * {
+    pointer-events: none;
+  }
+
   &__text {
     margin-right: 10px;
     color: map.get($color, text, white);
