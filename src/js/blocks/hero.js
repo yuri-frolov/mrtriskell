@@ -9,6 +9,7 @@
     fadeEffect: {
       crossFade: true
     },
+    noSwipingClass: 'swiper-no-swiping',
     simulateTouch: false,
 
     autoplay: {
