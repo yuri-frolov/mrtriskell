@@ -7,11 +7,13 @@
 }
 
 .swiper-navigation-wrapper {
+  // обёртка с классом container фиксирует слайдер и центрирует его
   position: relative;
-  width: 1216px;
+  max-width: 1216px;
 }
 
-.swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical > .swiper-pagination-bullets {
+.swiper-pagination-vertical.swiper-pagination-bullets,
+.swiper-vertical>.swiper-pagination-bullets {
   right: 12px;
 }
 
@@ -19,10 +21,12 @@
   position: relative;
   width: 16px;
   height: 16px;
+  opacity: 1;
 
-  border-radius : 0;
+  border-radius: 0;
   background: none;
-  border : 1px solid map.get($color, primary, dark);
+  border: 1px solid map.get($color, primary, dark);
+
   &-active {
     &::before {
       content: '';
@@ -39,12 +43,16 @@
 }
 
 .swiper-button {
-  &-prev, &-next {
+
+  &-prev,
+  &-next {
     width: 40px;
     height: 40px;
     border: 1px solid map.get($color, primary, base);
+
     &::after {
-      content: ''; /* отключает стандартную стрелку свайпера */
+      content: '';
+      /* отключает стандартную стрелку свайпера */
     }
   }
 
@@ -73,6 +81,7 @@
 
   &-next &-marker {
     margin-top: 100%;
+
     &::before {
       bottom: 0;
     }
@@ -81,13 +90,34 @@
 
 @media (max-width: 1255px) {
   .swiper-button {
-    &-next, &-prev {
+
+    &-next,
+    &-prev {
       display: none;
     }
   }
 }
 
 @media (min-width: 1256px) {
-  .swiper-pagination {
+  .swiper-navigation-wrapper-inner {
+    /* Обёртка определяет верные размеры элементов навигации
+    и позиционируется по макету */
+    position: relative;
+    max-width: 260px;
+    margin-left: auto;
+    margin-bottom: -20%;
+    transform: rotate(90deg) translateY(-100px);
+    z-index: 1;
+  }
+
+  .swiper-button {
+    &-prev {
+      transform: rotate(-90deg) translateX(19px);
+      z-index: 11;
+    }
+
+    &-next {
+      transform: rotate(-90deg) translateX(19px);
+    }
   }
 }
