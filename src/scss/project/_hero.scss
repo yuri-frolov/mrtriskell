@@ -89,7 +89,9 @@
 }
 ///////////////////////////////////////////
 @media (max-width: 768px) {
-
+  .swiper-navigation-wrapper {
+    display: none;
+  }
 }
 
 @media (max-width: 1255px) {
