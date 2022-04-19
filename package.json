@@ -44,5 +44,8 @@
     "stream-combiner2": "^1.1.1",
     "vinyl-ftp": "^0.6.1",
     "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "swiper": "^8.1.1"
   }
 }

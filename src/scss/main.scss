@@ -4,8 +4,8 @@
 // нормалайз и базовая стилизация
 @import './core/*.scss';
 
+// Дополнительная стилизация подключенных либ
+@import './libraries/*.scss';
+
 // App styles
 @import './project/*.scss';
-
-// Дополнительная стилизация подключенных либ
-@import './libraries/*.scss'
