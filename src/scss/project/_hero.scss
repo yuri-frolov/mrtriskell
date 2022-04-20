@@ -3,6 +3,7 @@
 
 .hero {
   background-color: map.get($color, background, dark);
+  z-index: 1;
 
   & .container {
     @media (max-width: 1256px) {

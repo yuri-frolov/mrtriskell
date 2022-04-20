@@ -1,7 +1,6 @@
 @use 'sass:map';
 
 .header {
-  position: relative;
   background-color: map.get($color, background, dark);
 
   &__contacts {
