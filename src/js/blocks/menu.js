@@ -9,14 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
     tabLinks[0].click();
     desktopHamburger.classList.add('hamburger--active');
     desktopmenu.classList.add('desktopmenu--opened');
-  }
+  };
 
   function desktopMenuClose() {
     desktopHamburger.classList.remove('hamburger--active');
     desktopmenu.classList.remove('desktopmenu--opened');
   }
 
-  document.addEventListener('click', menuSwitcher);
   function menuSwitcher(event) {
     let desktopMenuIsOpen = desktopmenu.classList.contains('desktopmenu--opened');
     /* Если меню закрыто и клик по кнопке */
@@ -40,12 +39,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  document.addEventListener('click', menuSwitcher);
+
   //////////////////TABS///////////////////////
   let tabLinks = document.querySelectorAll('.desktopmenu__link');
   const tabLinkActiveClass = 'desktopmenu__link--active';
 
   const tabPanes = document.querySelectorAll('.desktopmenu__tab');
   const tabPaneActiveClass = 'desktopmenu__tab--active';
+
   function openTabs(links, tabs) {
     links.forEach(link => {
       let linkId = link.getAttribute('data-id');

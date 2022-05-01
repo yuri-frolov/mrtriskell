@@ -1,6 +1,9 @@
 @use 'sass:map';
 
 .header {
+  width: 100%;
+  position: fixed;
+  z-index: 2;
   background-color: map.get($color, background, dark);
 
   &__contacts {
@@ -36,8 +39,13 @@
 }
 
 .header-mobile {
+  display: none;
   padding-top: $gutter + 8;
   padding-bottom: $gutter + 8;
+
+  &--active {
+    display: block;
+  }
 
   & .container {
     display: flex;
@@ -47,12 +55,22 @@
 }
 
 .header-desktop {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  display: none;
+  transition: 0.2s ease;
+
+  &--active {
+    display: block;
+  }
+
+  &--scrolled {
+    transform: translateY(-87px);
+  }
 
   & .container {
     display: flex;
     flex-direction: column;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
   & .container:before {
@@ -78,18 +96,6 @@
 
   & .search {
     flex-grow: 1;
-  }
-}
-
-@media (max-width: 1255px) {
-  .header-desktop {
-    display: none;
-  }
-}
-
-@media (min-width: 1256px) {
-  .header-mobile {
-    display: none;
   }
 }
 
