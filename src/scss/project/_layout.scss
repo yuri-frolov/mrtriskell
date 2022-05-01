@@ -1,5 +1,9 @@
 @use 'sass:map';
 
+body {
+  background-color: map.get($color, background, dark);
+}
+
 body .wrapper {
   display: flex;
   flex-direction: column;
