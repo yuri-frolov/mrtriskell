@@ -2,36 +2,19 @@
 @use 'sass:map';
 
 .btn {
-  position: relative;
-  width: 260px;
-  height: 70px;
-  color: map.get($color, text, white);
-  font-size: 20px;
-  background-color: map.get($color, primary, dark);
-  border: 2px solid map.get($color, primary, base);
-  transition: 0.1s ease;
-
-  &::before,
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-color: map.get($color, primary, dark);
-    border-top: 2px solid map.get($color, primary, base);
-    border-right: 2px solid map.get($color, primary, base);
+  & polygon {
+    fill: map.get($color, primary, dark);
+    stroke: map.get($color, primary, base);
+    stroke-width: 2px;
+    transition: fill 0.2s ease;
   }
 
-  &::before {
-    top: 50%;
-    transform: translateX(-1px) translateY(-50%) rotateZ(225deg);
-    left: -15px;
+  &__text {
+    fill: map.get($color, text, white);
+    font-size: 20px;
   }
 
-  &::after {
-    top: 50%;
-    transform: translateX(1px) translateY(-50%) rotateZ(45deg);
-    right: -15px;
+  &:hover polygon {
+    fill: map.get($color, primary, base);
   }
 }
