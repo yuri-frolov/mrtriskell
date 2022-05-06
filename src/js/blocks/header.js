@@ -7,6 +7,7 @@ const elements = {
   desktopHeaderActive: 'header-desktop--active',
 
   main: '.main',
+  hero: '.hero',
 };
 
 const screen = {
@@ -16,10 +17,6 @@ const screen = {
 
 const state = {
   screen: undefined,
-};
-
-const settings = {
-  headerScrolledHeight: 200,
 };
 
 const mobileHeader = document.querySelector(elements.mobileHeader);
@@ -98,16 +95,22 @@ function checkScrollPosition() {
   let scrollPosition = scrollY;
   //console.log(scrollPosition); // logs
 
-  if (scrollPosition >= settings.headerScrolledHeight) {
-    desktopHeader.classList.add('header-desktop--scrolled');
-    desktopHeaderContainer.addEventListener('mouseenter', removeClass);
-    desktopHeaderContainer.addEventListener('mouseleave', addClass);
-  }
+  if (state.screen == 'desktop') {
+    const firstBlockHeight = document.querySelector(elements.hero).offsetHeight;
+    const desktopHeaderHeight = desktopHeader.offsetHeight;
 
-  if (scrollPosition < settings.headerScrolledHeight) {
-    desktopHeader.classList.remove('header-desktop--scrolled');
-    desktopHeaderContainer.removeEventListener('mouseenter', removeClass);
-    desktopHeaderContainer.removeEventListener('mouseleave', addClass);
+
+    if (scrollPosition >= firstBlockHeight + (desktopHeaderHeight / 2)) {
+      desktopHeader.classList.add('header-desktop--scrolled');
+      desktopHeaderContainer.addEventListener('mouseenter', removeClass);
+      desktopHeaderContainer.addEventListener('mouseleave', addClass);
+    }
+
+    if (scrollPosition < firstBlockHeight + (desktopHeaderHeight / 2)) {
+      desktopHeader.classList.remove('header-desktop--scrolled');
+      desktopHeaderContainer.removeEventListener('mouseenter', removeClass);
+      desktopHeaderContainer.removeEventListener('mouseleave', addClass);
+    }
   }
 }
 
