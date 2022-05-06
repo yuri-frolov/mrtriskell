@@ -32,14 +32,14 @@ function enableMobileHeader() {
   mobileHeader.classList.add(elements.mobileHeaderActive);
   let mobileHeaderHeight = mobileHeader.offsetHeight - 1;
   main.style.marginTop = mobileHeaderHeight.toString() + 'px';
-};
+}
 
 function enableDesktopHeader() {
   mobileHeader.classList.remove(elements.mobileHeaderActive);
   desktopHeader.classList.add(elements.desktopHeaderActive);
   let desktopHeaderHeight = desktopHeader.offsetHeight - 1;
   main.style.marginTop = desktopHeaderHeight.toString() + 'px';
-};
+}
 
 function headerToggle(exp) {
 
@@ -57,7 +57,7 @@ function headerToggle(exp) {
       enableDesktopHeader();
       break;
   }
-};
+}
 
 function checkScreenState() {
   if (window.innerWidth < screen.tablet) {
@@ -73,7 +73,7 @@ function checkScreenState() {
     headerToggle(state.screen);
   }
   console.log(state.screen);// logs
-};
+}
 
 window.addEventListener('DOMContentLoaded', () => {
   checkScreenState();
@@ -87,12 +87,12 @@ window.addEventListener('resize', () => {
 /* Вспомогательные именованные функции */
 function addClass() {
   desktopHeader.classList.add('header-desktop--scrolled');
-};
+}
 
 function removeClass() {
   desktopHeader.classList.remove('header-desktop--scrolled');
   desktopMenuClose();
-};
+}
 
 function checkScrollPosition() {
   let scrollPosition = scrollY;
@@ -109,7 +109,7 @@ function checkScrollPosition() {
     desktopHeaderContainer.removeEventListener('mouseenter', removeClass);
     desktopHeaderContainer.removeEventListener('mouseleave', addClass);
   }
-};
+}
 
 window.addEventListener('scroll', function() {
   checkScrollPosition();

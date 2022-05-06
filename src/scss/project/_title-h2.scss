@@ -1,0 +1,20 @@
+@use 'sass:map';
+
+.title-h2 {
+  font-size: 25px;
+  font-family: 'Forum';
+  color: map.get($color, text, dark);
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .title-h2 {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 1256px) {
+  .title-h2 {
+    font-size: 60px;
+  }
+}

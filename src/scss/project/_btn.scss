@@ -6,6 +6,7 @@
     fill: map.get($color, primary, dark);
     stroke: map.get($color, primary, base);
     stroke-width: 2px;
+    stroke-linejoin: miter;
     transition: fill 0.2s ease;
   }
 

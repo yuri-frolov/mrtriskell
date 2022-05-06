@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tabLinks[0].click();
     desktopHamburger.classList.add('hamburger--active');
     desktopmenu.classList.add('desktopmenu--opened');
-  };
+  }
 
   function desktopMenuClose() {
     desktopHamburger.classList.remove('hamburger--active');

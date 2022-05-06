@@ -1,3 +1,4 @@
+"use strict";
 import mobmenu from './blocks/mobmenu';
 import menu from './blocks/menu';
 import header from './blocks/header';
